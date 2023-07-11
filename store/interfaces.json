@@ -1,0 +1,9 @@
+{
+  "socorro": {
+    "component": "OlaMundo"
+  },
+
+  "Producto": {
+    "component": "Product"
+  }
+}
