@@ -13,6 +13,8 @@ interface Recipe2 {
 
 const OlaMundo = () => {
 
+
+
   const [listOfRecipes, setListOfRecipes] = useState<Recipe2[]>([])
   const [filteredRecipe, setFilteredRecipe] = useState<Recipe2[]>([])
 
@@ -27,6 +29,7 @@ const OlaMundo = () => {
           Cookie:
             'eyJhbGciOiJFUzI1NiIsImtpZCI6IjgyRTg3RjdGODZFM0E4NkMwMkY4OTYyRTE1QkUyREJEODMzMEJENzgiLCJ0eXAiOiJqd3QifQ.eyJzdWIiOiJkb3VnbGFzLmFsb25zb0BhY2N0Lmdsb2JhbCIsImFjY291bnQiOiJhY2N0Z2xvYmFsIiwiYXVkaWVuY2UiOiJhZG1pbiIsInNlc3MiOiIyNTIwNGQzZC05ZTc2LTQ2MjgtOWZhNC1mNzdhNDFhZTE1MzYiLCJleHAiOjE2ODkwODA4NDMsInVzZXJJZCI6Ijg2YjVlNTlkLWVkNzUtNGEzZS04NDZmLWJlZjUxZDAyNzEzNiIsImlhdCI6MTY4ODk5NzE4MCwiaXNzIjoidG9rZW4tZW1pdHRlciIsImp0aSI6IjYxZTg1NWJlLWY1NGMtNDBhNS1hMDZkLTdlYzY2ZjYzZTM1ZCJ9.sT67giaK_l3OD-PiHhVBK7fUu3sQgLUhHx6sC_w9-sdJbVo36W0h4KWWbvuBTHm_4zfFp7V1S8Jxis7MWzUiEw',
           // Outros cabeçalhos podem ser adicionados aqui
+          // Mudar sempre o Cookie, o mesmo dura 24H
         },
       }
     )
