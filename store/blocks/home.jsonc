@@ -1,0 +1,18 @@
+{
+  "store.home": { 
+    "blocks": [
+      "rich-text",
+      "socorro"
+    ]
+  },
+  
+
+  "rich-text": { 
+    "props": { 
+      "text": "VTEX Store Framework",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "font": "t-heading-1"
+    }
+  }
+}
