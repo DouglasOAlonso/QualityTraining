@@ -1,0 +1,43 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: VTEX Publish and Deploy
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install Yarn
+        run: |
+          npm install --global yarn
+          echo "$(yarn global bin)" >> $GITHUB_PATH
+
+      - name: Retrieve Account
+        id: vendor
+        run: |
+          echo "ACCOUNT=$(cat manifest.json | grep -Po '(?<="vendor": ")[^"]*')" >> $GITHUB_OUTPUT
+
+      - name: VTEX Login
+        uses: vtex/action-toolbelt@v4
+        with:
+          account: ${{ steps.vendor.outputs.ACCOUNT}}
+          appKey: ${{ secrets.VTEX_TOOLBELT_KEY }}
+          appToken: ${{ secrets.VTEX_TOOLBELT_TOKEN }}
+
+      - name: VTEX Publish
+        run: vtex publish
+
+      - name: VTEX Deploy
+        run: vtex deploy -f
