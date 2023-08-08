@@ -1,0 +1,25 @@
+""" type orderID {
+  orderID: number
+}
+
+type name {
+  name: string
+}
+
+type lastName {
+  lastName: string
+}
+
+type recipeTitle {
+  recipeTitle: string
+}
+
+type recipeDesc {
+  recipeDesc: string
+}
+
+type SKUrecipe {
+    SKUrecipe: number
+}
+ """
+

@@ -1,0 +1,9 @@
+query Query($account: String, $acronym: String, $fields: [String]) {
+  documents(account: $account, acronym: $acronym, fields: $fields)
+    @context(provider: "vtex.store-graphql@2.157.1") {
+    fields {
+      key
+      value
+    }
+  }
+}
